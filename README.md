@@ -1,7 +1,7 @@
 # Homebrew Formulae
 
 ```terminal
-$ brew tap nshipster/formulae
+$ brew tap alephao/formulae
 ```
 
 ## Taps
