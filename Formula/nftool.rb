@@ -5,29 +5,29 @@
 class Nftool < Formula
   desc "A suite of tools for NFT generative art."
   homepage "https://github.com/alephao/nftool"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/alephao/nftool/releases/download/v0.1.0/nftool_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "95a41170017194b56e054c8bcfc6cfe8746a286116a503f4b2f0868f84547acd"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/alephao/nftool/releases/download/v0.1.0/nftool_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "529e948b7cd7f26a655ebfdb1f86751ea7c4e798b623df70cc07d41d77532a9b"
+      url "https://github.com/alephao/nftool/releases/download/v0.2.0/nftool_0.2.0_Darwin_x86_64.tar.gz"
+      sha256 "58f558680aa2c92f27d30058f02e61915c5aa2958850847e26899e015556746e"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/alephao/nftool/releases/download/v0.2.0/nftool_0.2.0_Darwin_arm64.tar.gz"
+      sha256 "48142bc9e2d18a24e1203865eccdf51d1781451889e9066d4d50c0d4cb4c9800"
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alephao/nftool/releases/download/v0.1.0/nftool_0.1.0_Linux_arm64.tar.gz"
-      sha256 "75083e6db5b878791c2d13437feffcf4a8606e14a39ceb3d0916f74521df7a18"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/alephao/nftool/releases/download/v0.1.0/nftool_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "14737584b4205a062882745cdd2bb136d7b0f1733b31edff36ba39851ae2ec04"
+      url "https://github.com/alephao/nftool/releases/download/v0.2.0/nftool_0.2.0_Linux_x86_64.tar.gz"
+      sha256 "5fa47364f63e0c841f57e829750bdd6521c772e41c4394817613f0bf7fa856d2"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/alephao/nftool/releases/download/v0.2.0/nftool_0.2.0_Linux_arm64.tar.gz"
+      sha256 "b82bfdddd6df6eda870e356ab62e203d3853d74bb118e3749eb1194946de39c5"
     end
   end
 
