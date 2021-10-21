@@ -12,22 +12,22 @@ class Nftool < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/alephao/nftool/releases/download/v0.2.0/nftool_0.2.0_Darwin_x86_64.tar.gz"
-      sha256 "58f558680aa2c92f27d30058f02e61915c5aa2958850847e26899e015556746e"
+      sha256 "2d3d6a0f5e9434f39b1d5a47a7e387d2f7809db9297c7926bacef46502b7d9e3"
     end
     if Hardware::CPU.arm?
       url "https://github.com/alephao/nftool/releases/download/v0.2.0/nftool_0.2.0_Darwin_arm64.tar.gz"
-      sha256 "48142bc9e2d18a24e1203865eccdf51d1781451889e9066d4d50c0d4cb4c9800"
+      sha256 "81eb1b2b34fa12ad3cf5f16db8c4eb884cfa12cc504625a378a828cadde8e487"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/alephao/nftool/releases/download/v0.2.0/nftool_0.2.0_Linux_x86_64.tar.gz"
-      sha256 "5fa47364f63e0c841f57e829750bdd6521c772e41c4394817613f0bf7fa856d2"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/alephao/nftool/releases/download/v0.2.0/nftool_0.2.0_Linux_arm64.tar.gz"
-      sha256 "b82bfdddd6df6eda870e356ab62e203d3853d74bb118e3749eb1194946de39c5"
+      sha256 "bdb84a126551129359a3d59cdf92e2b8201a34813b69e9772866815b3a6fea8b"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/alephao/nftool/releases/download/v0.2.0/nftool_0.2.0_Linux_x86_64.tar.gz"
+      sha256 "2dfd53e5520e2f61528370b19bb9710675dd6e5427d2f6f4b5ab9726fce2c3ac"
     end
   end
 
