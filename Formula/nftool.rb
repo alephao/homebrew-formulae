@@ -7,7 +7,6 @@ class Nftool < Formula
   homepage "https://github.com/alephao/nftool"
   version "0.4.0"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
