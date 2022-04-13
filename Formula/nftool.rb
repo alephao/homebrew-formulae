@@ -5,32 +5,44 @@
 class Nftool < Formula
   desc "A suite of tools for NFT generative art."
   homepage "https://github.com/alephao/nftool"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/alephao/nftool/releases/download/v0.4.0/nftool_0.4.0_Darwin_x86_64.tar.gz"
-      sha256 "6a9febd58e080c78df0c7edccbe7fcca1f32fbc2534654f5b058fc8474d86e2a"
+      url "https://github.com/alephao/nftool/releases/download/v0.5.0/nftool_0.5.0_Darwin_x86_64.tar.gz"
+      sha256 "42af67165367f03ab6849724ee8b8ee79becd09fcf0aa7da066326b213775bd1"
+
+      def install
+        bin.install "nftool"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/alephao/nftool/releases/download/v0.4.0/nftool_0.4.0_Darwin_arm64.tar.gz"
-      sha256 "b1b8ab96f0613088889d896eb2cf2b8c5027f9fbd6055d1717ad11f2d635f35d"
+      url "https://github.com/alephao/nftool/releases/download/v0.5.0/nftool_0.5.0_Darwin_arm64.tar.gz"
+      sha256 "9b684187daa8ab3e2a89b92aee7484fa6e62770013e01bc53ce062c9836464d4"
+
+      def install
+        bin.install "nftool"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alephao/nftool/releases/download/v0.4.0/nftool_0.4.0_Linux_arm64.tar.gz"
-      sha256 "6494604cb135b168e2765ddcf7ce8d5806d8f08fb490ab123461e43201428fdf"
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/alephao/nftool/releases/download/v0.4.0/nftool_0.4.0_Linux_x86_64.tar.gz"
-      sha256 "9db29877cf066f9c5eebe6c0d38276addcb4e68f5747f8b60fbce1b4c6e7a9b5"
-    end
-  end
+      url "https://github.com/alephao/nftool/releases/download/v0.5.0/nftool_0.5.0_Linux_x86_64.tar.gz"
+      sha256 "31bdf4ea0356e210f772c8a4678366baca3bf53aa573a34d0c2c04d088153a2b"
 
-  def install
-    bin.install "nftool"
+      def install
+        bin.install "nftool"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/alephao/nftool/releases/download/v0.5.0/nftool_0.5.0_Linux_arm64.tar.gz"
+      sha256 "1bf41b8397e68392588a89534c4b0d3a9678d318e2818cf102c029f0881d1df5"
+
+      def install
+        bin.install "nftool"
+      end
+    end
   end
 end
